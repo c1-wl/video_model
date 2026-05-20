@@ -34,3 +34,15 @@ BETA_END = 0.02
 
 # 设备
 DEVICE = torch.device("cpu")   # 可按需改为 cuda
+
+
+# ========== 条件生成相关配置 ==========
+TEXT_EMBED_DIM = 128          # 文本嵌入维度
+IMAGE_EMBED_DIM = 128         # 图像嵌入维度
+USE_CLIP = False               # 是否使用CLIP（需要安装transformers）
+MAX_TEXT_LEN = 32              # 文本最大token数
+VOCAB_SIZE = 1000              # 简单词表大小（仅当USE_CLIP=False时使用）
+
+# 条件训练
+NUM_EPOCHS_COND = 200
+COND_LR = 1e-3
